@@ -20,7 +20,7 @@ from etapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',views.home),
+    path('',views.home),
     path('expense/',views.expense),
     path('income/',views.income),
 ]

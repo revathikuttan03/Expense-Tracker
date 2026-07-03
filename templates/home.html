@@ -18,13 +18,22 @@
    <hr>
    <h2>Financial Summary</h2>
    <form action="">
-    <label for="" class="lbl">Total Income:</label><input type="text" name="totalincome"><br>
+    <label for="" class="lbl">Total Income:</label><input type="text" name="totalincome" ><br>
     <label for="" class="lbl">Total Expense:</label><input type="text" name="totalexpense"><br>
     <label for="" class="lbl">Balance:</label><input type="text" name="balance"><br>
    </form>
    <hr>
    <a href="/expense/"><button>Add Expense</button></a>
-   
-  <a href="/income/"><button>Add Income</button></a>
+ <a href="/income/"><button>Add Income</button></a>
+ <h1>expense</h1>
+  {% for i in d %}
+  <p>amount:{{i.amount}}</p>
+  <p>description:{{i.description}}</p>
+  {% endfor %} 
+  <h1>income</h1>
+  {% for i in income %}
+  <p>amount:{{i.amount}}</p>
+  <p>description:{{i.description}}</p>
+  {% endfor %}
 </body>
 </html>
