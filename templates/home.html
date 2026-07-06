@@ -7,20 +7,18 @@
 </head>
 <style>
      .lbl{
-        display: inline-block; width: 120px;
+        display: inline-block; width: 200px;
     }
-    .btn{
-        
-    }
+    
 </style>
 <body>
    <h1>Expense Tracker</h1> 
    <hr>
    <h2>Financial Summary</h2>
    <form action="">
-    <label for="" class="lbl">Total Income:</label><input type="text" name="totalincome" ><br>
-    <label for="" class="lbl">Total Expense:</label><input type="text" name="totalexpense"><br>
-    <label for="" class="lbl">Balance:</label><input type="text" name="balance"><br>
+    <label for="" class="lbl">Total Income:{{summery.totalincome}}</label><br>
+    <label for="" class="lbl">Total Expense:{{ summery.totalexpense}}</label><br>
+    <label for="" class="lbl">Balance:{{summery.balance }}</label><br>
    </form>
    <hr>
    <a href="/expense/"><button>Add Expense</button></a>

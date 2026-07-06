@@ -7,8 +7,23 @@ from etapp.models import Expense,Income
 def home(request):
     ex= Expense.objects.all()
     income = Income.objects.all()
+    total_ex = 0
+    for i in ex:
+        total_ex += i.amount
+    total_income = 0
+    for i in income:
+        total_income += i.amount
+
+    balance = total_income - total_ex
+
+    expensesummery ={
+        "totalexpense":total_ex,
+        "totalincome":total_income,
+        "balance":balance
+    }
+
    
-    return render(request,"home.html",{"d":ex,"income":income})
+    return render(request,"home.html",{"d":ex,"income":income,"summery":expensesummery})
    
 def expense(request):
     
