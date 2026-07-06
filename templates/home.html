@@ -4,34 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  
 </head>
 <style>
-     .lbl{
-        display: inline-block; width: 200px;
-    }
     
 </style>
 <body>
+    
+        
    <h1>Expense Tracker</h1> 
    <hr>
    <h2>Financial Summary</h2>
    <form action="">
-    <label for="" class="lbl">Total Income:{{summery.totalincome}}</label><br>
-    <label for="" class="lbl">Total Expense:{{ summery.totalexpense}}</label><br>
-    <label for="" class="lbl">Balance:{{summery.balance }}</label><br>
+   <label for="" >Total Income:{{summery.totalincome}}</label><br>
+    <label for="" >Total Expense:{{ summery.totalexpense}}</label><br>
+    <label for="" >Balance:{{summery.balance }}</label><br>
    </form>
    <hr>
+   
    <a href="/expense/"><button>Add Expense</button></a>
- <a href="/income/"><button>Add Income</button></a>
+ 
+
+
+ <div class="row">
+    <div class="col-6">
  <h1>expense</h1>
   {% for i in d %}
   <p>amount:{{i.amount}}</p>
   <p>description:{{i.description}}</p>
   {% endfor %} 
+  </div>
+  <div class="col-6">
+    <a href="/income/"><button>Add Income</button></a>
   <h1>income</h1>
   {% for i in income %}
   <p>amount:{{i.amount}}</p>
   <p>description:{{i.description}}</p>
   {% endfor %}
+  </div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
